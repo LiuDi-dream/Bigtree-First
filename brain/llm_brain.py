@@ -28,8 +28,41 @@ def build_model_messages(system_prompt, env_context, history_messages):
 
 
 def _make_client():
-    token = os.getenv("GITHUB_TOKEN", "")
-    return OpenAI(base_url="https://models.inference.ai.azure.com", api_key=token)
+    """
+    根据 .env 配置文件选择对应的大模型 API 提供商，返回 OpenAI 兼容客户端。
+    支持: github, openai, nvidia, custom (如交大 API)
+    """
+    provider = os.getenv("LLM_PROVIDER", "github").lower()
+    
+    if provider == "github":
+        token = os.getenv("GITHUB_TOKEN", "")
+        if not token:
+            raise ValueError("❌ GITHUB_TOKEN 未配置")
+        return OpenAI(base_url="https://models.inference.ai.azure.com", api_key=token)
+    
+    elif provider == "openai":
+        api_key = os.getenv("OPENAI_API_KEY", "")
+        if not api_key:
+            raise ValueError("❌ OPENAI_API_KEY 未配置")
+        base_url = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
+        return OpenAI(base_url=base_url, api_key=api_key)
+    
+    elif provider == "nvidia":
+        api_key = os.getenv("NVIDIA_API_KEY", "")
+        if not api_key:
+            raise ValueError("❌ NVIDIA_API_KEY 未配置")
+        base_url = os.getenv("NVIDIA_BASE_URL", "https://integrate.api.nvidia.com/v1")
+        return OpenAI(base_url=base_url, api_key=api_key)
+    
+    elif provider == "custom":
+        api_key = os.getenv("CUSTOM_API_KEY", "")
+        base_url = os.getenv("CUSTOM_BASE_URL", "")
+        if not api_key or not base_url:
+            raise ValueError("❌ CUSTOM_API_KEY 或 CUSTOM_BASE_URL 未配置")
+        return OpenAI(base_url=base_url, api_key=api_key)
+    
+    else:
+        raise ValueError(f"❌ 不支持的 LLM_PROVIDER: {provider}，支持值: github, openai, nvidia, custom")
 
 
 def ask_agent(messages, store, uid, open_id):

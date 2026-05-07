@@ -3,7 +3,6 @@ import os
 import json
 import re
 import datetime
-from openai import OpenAI
 from dotenv import load_dotenv
 
 # 引入我们拆分出来的核心模块
@@ -23,16 +22,16 @@ def refresh_env_context(uid):
 def main():
     print("🚀 原神智能体 CLI 终端版启动中...")
 
-    token = os.getenv("GITHUB_TOKEN", "")
-    if not token:
-        print("❌ 未检测到 GITHUB_TOKEN，无法调用模型。")
+    # 验证 LLM_PROVIDER 配置
+    provider = os.getenv("LLM_PROVIDER", "github").lower()
+    print(f"🔧 已配置 LLM 提供商: {provider}")
+    
+    try:
+        client = llm_brain._make_client()
+        print(f"✅ {provider.upper()} 客户端初始化成功")
+    except ValueError as e:
+        print(f"❌ {e}")
         return
-
-    # 初始化客户端
-    client = OpenAI(
-        base_url="https://models.inference.ai.azure.com",
-        api_key=token
-    )
 
     # 通过记忆管家加载存储
     store = memory_manager.load_chat_store()
