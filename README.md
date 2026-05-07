@@ -72,7 +72,7 @@
 
 ### 2. 安装项目
 ```bash
-git clone [https://github.com/box-opener/GI_Agent.git](https://github.com/box-opener/GI_Agent.git)
+git clone https://github.com/box-opener/GI_Agent.git
 cd genshin_agent
 
 # 建议使用虚拟环境
