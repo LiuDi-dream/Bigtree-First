@@ -254,5 +254,5 @@ def fetch_enka_data(uid):
 
 if __name__ == "__main__":
     import json
-    res = fetch_enka_data("286682352")
+    res = fetch_enka_data("158067075")
     print(json.dumps(res, ensure_ascii=False, indent=4))

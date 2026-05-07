@@ -1,0 +1,1805 @@
+{
+  "weapons": [
+    {
+      "name": "Item [UI_EquipIcon_Sword_Falcon]",
+      "url": "/chs/archive/weapon/11501/aquila-favonia",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Dvalin]",
+      "url": "/chs/archive/weapon/11502/skyward-blade",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Widsith]",
+      "url": "/chs/archive/weapon/11503/freedom-sworn",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Kunwu]",
+      "url": "/chs/archive/weapon/11504/summit-shaper",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Morax]",
+      "url": "/chs/archive/weapon/11505/primordial-jade-cutter",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Narukami]",
+      "url": "/chs/archive/weapon/11509/mistsplitter-reforged",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Amenoma]",
+      "url": "/chs/archive/weapon/11510/haran-geppaku-futsu",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Deshret]",
+      "url": "/chs/archive/weapon/11511/key-of-khaj-nisut",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Ayus]",
+      "url": "/chs/archive/weapon/11512/light-of-foliar-incision",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Regalis]",
+      "url": "/chs/archive/weapon/11513/splendor-of-tranquil-waters",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Needle]",
+      "url": "/chs/archive/weapon/11514/uraku-misugiri",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Estoc]",
+      "url": "/chs/archive/weapon/11515/absolution",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_XochitlsTube]",
+      "url": "/chs/archive/weapon/11516/peak-patrol-song",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_OuterSword]",
+      "url": "/chs/archive/weapon/11517/azurelight",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Motsognir]",
+      "url": "/chs/archive/weapon/11518/athame-artis",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_SilverwareSaw]",
+      "url": "/chs/archive/weapon/11519/lightbearing-moonshard",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Dvalin]",
+      "url": "/chs/archive/weapon/12501/skyward-pride",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Wolfmound]",
+      "url": "/chs/archive/weapon/12502/wolfs-gravestone",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Widsith]",
+      "url": "/chs/archive/weapon/12503/song-of-broken-pines",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Kunwu]",
+      "url": "/chs/archive/weapon/12504/the-unforged",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Itadorimaru]",
+      "url": "/chs/archive/weapon/12510/redhorn-stonethresher",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Deshret]",
+      "url": "/chs/archive/weapon/12511/beacon-of-the-reed-sea",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_GoldenVerdict]",
+      "url": "/chs/archive/weapon/12512/verdict",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_EmeraldSword]",
+      "url": "/chs/archive/weapon/12513/fang-of-the-mountain-king",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_RadianceSword]",
+      "url": "/chs/archive/weapon/12514/a-thousand-blazing-suns",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_EnsisAquilonis]",
+      "url": "/chs/archive/weapon/12515/gest-of-the-mighty-wolf",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Homa]",
+      "url": "/chs/archive/weapon/13501/staff-of-homa",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Dvalin]",
+      "url": "/chs/archive/weapon/13502/skyward-spine",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Kunwu]",
+      "url": "/chs/archive/weapon/13504/vortex-vanquisher",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Morax]",
+      "url": "/chs/archive/weapon/13505/primordial-jade-winged-spear",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Santika]",
+      "url": "/chs/archive/weapon/13507/calamity-queller",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Narukami]",
+      "url": "/chs/archive/weapon/13509/engulfing-lightning",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Deshret]",
+      "url": "/chs/archive/weapon/13511/staff-of-the-scarlet-sands",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_BloodMoon]",
+      "url": "/chs/archive/weapon/13512/crimson-moons-semblance",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Muguet]",
+      "url": "/chs/archive/weapon/13513/lumidouce-elegy",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Trident]",
+      "url": "/chs/archive/weapon/13514/symphonist-of-scents",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Perdix]",
+      "url": "/chs/archive/weapon/13515/fractured-halo",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_TummaLyhty]",
+      "url": "/chs/archive/weapon/13516/bloodsoaked-ruins",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Dvalin]",
+      "url": "/chs/archive/weapon/14501/skyward-atlas",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Fourwinds]",
+      "url": "/chs/archive/weapon/14502/lost-prayer-to-the-sacred-winds",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Kunwu]",
+      "url": "/chs/archive/weapon/14504/memory-of-dust",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Morax]",
+      "url": "/chs/archive/weapon/14505/jadefalls-splendor",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Kaleido]",
+      "url": "/chs/archive/weapon/14506/everlasting-moonglow",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Narukami]",
+      "url": "/chs/archive/weapon/14509/kaguras-verity",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Ayus]",
+      "url": "/chs/archive/weapon/14511/a-thousand-floating-dreams",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Alaya]",
+      "url": "/chs/archive/weapon/14512/tulaytullahs-remembrance",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Wheatley]",
+      "url": "/chs/archive/weapon/14513/cashflow-supervision",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Iudex]",
+      "url": "/chs/archive/weapon/14514/tome-of-the-eternal-flow",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_MountainGale]",
+      "url": "/chs/archive/weapon/14515/cranes-echoing-call",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_MechaPufferfish]",
+      "url": "/chs/archive/weapon/14516/surfs-up",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Figurines]",
+      "url": "/chs/archive/weapon/14517/starcallers-watch",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_SakuraFan]",
+      "url": "/chs/archive/weapon/14518/sunny-morning-sleep-in",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_VaresaTransformer]",
+      "url": "/chs/archive/weapon/14519/vivid-notions",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_MenulisRing]",
+      "url": "/chs/archive/weapon/14520/nightweavers-looking-glass",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Sistrum]",
+      "url": "/chs/archive/weapon/14521/reliquary-of-truth",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Brisingamen]",
+      "url": "/chs/archive/weapon/14522/nocturnes-curtain-call",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Dvalin]",
+      "url": "/chs/archive/weapon/15501/skyward-harp",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Amos]",
+      "url": "/chs/archive/weapon/15502/amos-bow",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Widsith]",
+      "url": "/chs/archive/weapon/15503/elegy-for-the-end",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Worldbane]",
+      "url": "/chs/archive/weapon/15507/polar-star",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Kirin]",
+      "url": "/chs/archive/weapon/15508/aqua-simulacra",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Narukami]",
+      "url": "/chs/archive/weapon/15509/thundering-pulse",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Ayus]",
+      "url": "/chs/archive/weapon/15511/hunters-path",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Pledge]",
+      "url": "/chs/archive/weapon/15512/the-first-great-magic",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Arcdange]",
+      "url": "/chs/archive/weapon/15513/silvershower-heartstrings",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Qoyllorsnova]",
+      "url": "/chs/archive/weapon/15514/astral-vultures-crimson-plumage",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Arianna]",
+      "url": "/chs/archive/weapon/15515/the-daybreak-chronicles",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Alkonost]",
+      "url": "/chs/archive/weapon/15516/golden-frostbound-oath",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Zephyrus]",
+      "url": "/chs/archive/weapon/11401/favonius-sword",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Troupe]",
+      "url": "/chs/archive/weapon/11402/the-flute",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Fossil]",
+      "url": "/chs/archive/weapon/11403/sacrificial-sword",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Theocrat]",
+      "url": "/chs/archive/weapon/11404/royal-longsword",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Rockkiller]",
+      "url": "/chs/archive/weapon/11405/lions-roar",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Proto]",
+      "url": "/chs/archive/weapon/11406/prototype-rancour",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Exotic]",
+      "url": "/chs/archive/weapon/11407/iron-sting",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Blackrock]",
+      "url": "/chs/archive/weapon/11408/blackcliff-longsword",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Bloodstained]",
+      "url": "/chs/archive/weapon/11409/the-black-sword",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Outlaw]",
+      "url": "/chs/archive/weapon/11410/the-alley-flash",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Psalmus]",
+      "url": "/chs/archive/weapon/11412/sword-of-descension",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Magnum]",
+      "url": "/chs/archive/weapon/11413/festering-desire",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Bakufu]",
+      "url": "/chs/archive/weapon/11414/amenoma-kageuchi",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Opus]",
+      "url": "/chs/archive/weapon/11415/cinnabar-spindle",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Youtou]",
+      "url": "/chs/archive/weapon/11416/kagotsurube-isshin",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Arakalari]",
+      "url": "/chs/archive/weapon/11417/sapwood-blade",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Pleroma]",
+      "url": "/chs/archive/weapon/11418/xiphos-moonlight",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Kasabouzu]",
+      "url": "/chs/archive/weapon/11422/toukabou-shigure",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Boreas]",
+      "url": "/chs/archive/weapon/11424/wolf-fang",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Vorpal]",
+      "url": "/chs/archive/weapon/11425/finale-of-the-deep",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Machination]",
+      "url": "/chs/archive/weapon/11426/fleuve-cendre-ferryman",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Mechanic]",
+      "url": "/chs/archive/weapon/11427/the-dockhands-assistant",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Purewill]",
+      "url": "/chs/archive/weapon/11428/sword-of-narzissenkreuz",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Umpakati]",
+      "url": "/chs/archive/weapon/11430/sturdy-bone",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Isikhulu]",
+      "url": "/chs/archive/weapon/11431/flute-of-ezpitzal",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_SacrificialNgombe]",
+      "url": "/chs/archive/weapon/11432/calamity-of-eshu",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Ilmarinen]",
+      "url": "/chs/archive/weapon/11433/serenitys-call",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Miekka]",
+      "url": "/chs/archive/weapon/11434/moonweavers-dawn",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Zephyrus]",
+      "url": "/chs/archive/weapon/12401/favonius-greatsword",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Troupe]",
+      "url": "/chs/archive/weapon/12402/the-bell",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Fossil]",
+      "url": "/chs/archive/weapon/12403/sacrificial-greatsword",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Theocrat]",
+      "url": "/chs/archive/weapon/12404/royal-greatsword",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Perdue]",
+      "url": "/chs/archive/weapon/12405/rainslasher",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Proto]",
+      "url": "/chs/archive/weapon/12406/prototype-archaic",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Exotic]",
+      "url": "/chs/archive/weapon/12407/whiteblind",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Blackrock]",
+      "url": "/chs/archive/weapon/12408/blackcliff-slasher",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Kione]",
+      "url": "/chs/archive/weapon/12409/serpent-spine",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Lapis]",
+      "url": "/chs/archive/weapon/12410/lithic-blade",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Dragonfell]",
+      "url": "/chs/archive/weapon/12411/snow-tombed-starsilver",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_MillenniaTuna]",
+      "url": "/chs/archive/weapon/12412/luxurious-sea-lord",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Bakufu]",
+      "url": "/chs/archive/weapon/12414/katsuragikiri-nagamasa",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Pleroma]",
+      "url": "/chs/archive/weapon/12415/makhaira-aquamarine",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Maria]",
+      "url": "/chs/archive/weapon/12416/akuoumaru",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Arakalari]",
+      "url": "/chs/archive/weapon/12417/forest-regalia",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Fleurfair]",
+      "url": "/chs/archive/weapon/12418/mailed-flower",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_BeastTamer]",
+      "url": "/chs/archive/weapon/12424/talking-stick",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Vorpal]",
+      "url": "/chs/archive/weapon/12425/tidal-shadow",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Champion]",
+      "url": "/chs/archive/weapon/12426/ultimate-overlords-mega-magic-sword",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Mechanic]",
+      "url": "/chs/archive/weapon/12427/portable-power-saw",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Umpakati]",
+      "url": "/chs/archive/weapon/12430/fruitful-hook",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Isikhulu]",
+      "url": "/chs/archive/weapon/12431/earth-shaker",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Polilith]",
+      "url": "/chs/archive/weapon/12432/flame-forged-insight",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Ilmarinen]",
+      "url": "/chs/archive/weapon/12433/master-key",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Stardust]",
+      "url": "/chs/archive/weapon/13401/dragons-bane",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Proto]",
+      "url": "/chs/archive/weapon/13402/prototype-starglitter",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Exotic]",
+      "url": "/chs/archive/weapon/13403/crescent-pike",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Blackrock]",
+      "url": "/chs/archive/weapon/13404/blackcliff-pole",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Gladiator]",
+      "url": "/chs/archive/weapon/13405/deathmatch",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Lapis]",
+      "url": "/chs/archive/weapon/13406/lithic-spear",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Zephyrus]",
+      "url": "/chs/archive/weapon/13407/favonius-lance",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Theocrat]",
+      "url": "/chs/archive/weapon/13408/royal-spear",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Everfrost]",
+      "url": "/chs/archive/weapon/13409/dragonspine-spear",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Bakufu]",
+      "url": "/chs/archive/weapon/13414/kitain-cross-spear",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Mori]",
+      "url": "/chs/archive/weapon/13415/the-catch",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Maria]",
+      "url": "/chs/archive/weapon/13416/wavebreakers-fin",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Arakalari]",
+      "url": "/chs/archive/weapon/13417/moonpiercer",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Windvane]",
+      "url": "/chs/archive/weapon/13419/missive-windspear",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Shanty]",
+      "url": "/chs/archive/weapon/13424/ballad-of-the-fjords",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Vorpal]",
+      "url": "/chs/archive/weapon/13425/rightful-reward",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Caduceus]",
+      "url": "/chs/archive/weapon/13426/dialogues-of-the-desert-sages",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Mechanic]",
+      "url": "/chs/archive/weapon/13427/prospectors-drill",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Umpakati]",
+      "url": "/chs/archive/weapon/13430/mountain-bracing-bolt",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Isikhulu]",
+      "url": "/chs/archive/weapon/13431/footprint-of-the-rainbow",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Aoandon]",
+      "url": "/chs/archive/weapon/13432/tamayuratei-no-ohanashi",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Ilmarinen]",
+      "url": "/chs/archive/weapon/13433/prospectors-shovel",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Krivule]",
+      "url": "/chs/archive/weapon/13434/sacrificers-staff",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Zephyrus]",
+      "url": "/chs/archive/weapon/14401/favonius-codex",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Troupe]",
+      "url": "/chs/archive/weapon/14402/the-widsith",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Fossil]",
+      "url": "/chs/archive/weapon/14403/sacrificial-fragments",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Theocrat]",
+      "url": "/chs/archive/weapon/14404/royal-grimoire",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Resurrection]",
+      "url": "/chs/archive/weapon/14405/solar-pearl",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Proto]",
+      "url": "/chs/archive/weapon/14406/prototype-amber",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Exotic]",
+      "url": "/chs/archive/weapon/14407/mappa-mare",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Blackrock]",
+      "url": "/chs/archive/weapon/14408/blackcliff-agate",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Truelens]",
+      "url": "/chs/archive/weapon/14409/eye-of-perception",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Outlaw]",
+      "url": "/chs/archive/weapon/14410/wine-and-song",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Everfrost]",
+      "url": "/chs/archive/weapon/14412/frostbearer",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Ludiharpastum]",
+      "url": "/chs/archive/weapon/14413/dodoco-tales",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Bakufu]",
+      "url": "/chs/archive/weapon/14414/hakushin-ring",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Jyanome]",
+      "url": "/chs/archive/weapon/14415/oathsworn-eye",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Pleroma]",
+      "url": "/chs/archive/weapon/14416/wandering-evenstar",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Arakalari]",
+      "url": "/chs/archive/weapon/14417/fruit-of-fulfillment",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Yue]",
+      "url": "/chs/archive/weapon/14424/sacrificial-jade",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Vorpal]",
+      "url": "/chs/archive/weapon/14425/flowing-purity",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_DandelionPoem]",
+      "url": "/chs/archive/weapon/14426/ballad-of-the-boundless-blue",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_ConchSprayer]",
+      "url": "/chs/archive/weapon/14427/ash-graven-drinking-horn",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Umpakati]",
+      "url": "/chs/archive/weapon/14430/waveriding-whirl",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Isikhulu]",
+      "url": "/chs/archive/weapon/14431/ring-of-yaxche",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_SeeliesLute]",
+      "url": "/chs/archive/weapon/14432/etherlight-spindlelute",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Ilmarinen]",
+      "url": "/chs/archive/weapon/14433/blackmarrow-lantern",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Ziedas]",
+      "url": "/chs/archive/weapon/14434/dawning-frost",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Zephyrus]",
+      "url": "/chs/archive/weapon/15401/favonius-warbow",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Troupe]",
+      "url": "/chs/archive/weapon/15402/the-stringless",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Fossil]",
+      "url": "/chs/archive/weapon/15403/sacrificial-bow",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Theocrat]",
+      "url": "/chs/archive/weapon/15404/royal-bow",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Recluse]",
+      "url": "/chs/archive/weapon/15405/rust",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Proto]",
+      "url": "/chs/archive/weapon/15406/prototype-crescent",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Exotic]",
+      "url": "/chs/archive/weapon/15407/compound-bow",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Blackrock]",
+      "url": "/chs/archive/weapon/15408/blackcliff-warbow",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Viridescent]",
+      "url": "/chs/archive/weapon/15409/the-viridescent-hunt",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Outlaw]",
+      "url": "/chs/archive/weapon/15410/alley-hunter",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Fallensun]",
+      "url": "/chs/archive/weapon/15411/fading-twilight",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Nachtblind]",
+      "url": "/chs/archive/weapon/15412/mitternachts-waltz",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Fleurfair]",
+      "url": "/chs/archive/weapon/15413/windblume-ode",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Bakufu]",
+      "url": "/chs/archive/weapon/15414/hamayumi",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Predator]",
+      "url": "/chs/archive/weapon/15415/predator",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Maria]",
+      "url": "/chs/archive/weapon/15416/mouuns-moon",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Arakalari]",
+      "url": "/chs/archive/weapon/15417/kings-squire",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Fin]",
+      "url": "/chs/archive/weapon/15418/end-of-the-line",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Ibis]",
+      "url": "/chs/archive/weapon/15419/ibis-piercer",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Gurabad]",
+      "url": "/chs/archive/weapon/15424/scion-of-the-blazing-sun",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Vorpal]",
+      "url": "/chs/archive/weapon/15425/song-of-stillness",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Ultimatum]",
+      "url": "/chs/archive/weapon/15426/cloudforged",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Mechanic]",
+      "url": "/chs/archive/weapon/15427/range-gauge",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Umpakati]",
+      "url": "/chs/archive/weapon/15430/flower-wreathed-feathers",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Isikhulu]",
+      "url": "/chs/archive/weapon/15431/chain-breaker",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Stinger]",
+      "url": "/chs/archive/weapon/15432/sequence-of-solitude",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Ilmarinen]",
+      "url": "/chs/archive/weapon/15433/snare-hook",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_ElegguaBow]",
+      "url": "/chs/archive/weapon/15434/rainbow-serpents-rain-bow",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Steel]",
+      "url": "/chs/archive/weapon/11301/cool-steel",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Dawn]",
+      "url": "/chs/archive/weapon/11302/harbinger-of-dawn",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Traveler]",
+      "url": "/chs/archive/weapon/11303/travelers-handy-sword",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Darker]",
+      "url": "/chs/archive/weapon/11304/dark-iron-sword",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Sashimi]",
+      "url": "/chs/archive/weapon/11305/fillet-blade",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Mitsurugi]",
+      "url": "/chs/archive/weapon/11306/skyrider-sword",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Glaive]",
+      "url": "/chs/archive/weapon/12301/ferrous-shadow",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Siegfry]",
+      "url": "/chs/archive/weapon/12302/bloodtainted-greatsword",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Tin]",
+      "url": "/chs/archive/weapon/12303/white-iron-greatsword",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Reasoning]",
+      "url": "/chs/archive/weapon/12305/debate-club",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Mitsurugi]",
+      "url": "/chs/archive/weapon/12306/skyrider-greatsword",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Ruby]",
+      "url": "/chs/archive/weapon/13301/white-tassel",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Halberd]",
+      "url": "/chs/archive/weapon/13302/halberd",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Noire]",
+      "url": "/chs/archive/weapon/13303/black-tassel",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Intro]",
+      "url": "/chs/archive/weapon/14301/magic-guide",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Pulpfic]",
+      "url": "/chs/archive/weapon/14302/thrilling-tales-of-dragon-slayers",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Lightnov]",
+      "url": "/chs/archive/weapon/14303/otherworldly-story",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Jade]",
+      "url": "/chs/archive/weapon/14304/emerald-orb",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Phoney]",
+      "url": "/chs/archive/weapon/14305/twin-nephrite",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Crowfeather]",
+      "url": "/chs/archive/weapon/15301/raven-bow",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Arjuna]",
+      "url": "/chs/archive/weapon/15302/sharpshooters-oath",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Curve]",
+      "url": "/chs/archive/weapon/15303/recurve-bow",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Sling]",
+      "url": "/chs/archive/weapon/15304/slingshot",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Msg]",
+      "url": "/chs/archive/weapon/15305/messenger",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Silver]",
+      "url": "/chs/archive/weapon/11201/silver-sword",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Oyaji]",
+      "url": "/chs/archive/weapon/12201/old-mercs-pal",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Rod]",
+      "url": "/chs/archive/weapon/13201/iron-point",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Pocket]",
+      "url": "/chs/archive/weapon/14201/pocket-grimoire",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Old]",
+      "url": "/chs/archive/weapon/15201/seasoned-hunters-bow",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Sword_Blunt]",
+      "url": "/chs/archive/weapon/11101/dull-blade",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Claymore_Aniki]",
+      "url": "/chs/archive/weapon/12101/waster-greatsword",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Pole_Gewalt]",
+      "url": "/chs/archive/weapon/13101/beginners-protector",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Catalyst_Apprentice]",
+      "url": "/chs/archive/weapon/14101/apprentices-notes",
+      "type": "weapon"
+    },
+    {
+      "name": "Item [UI_EquipIcon_Bow_Hunters]",
+      "url": "/chs/archive/weapon/15101/hunters-bow",
+      "type": "weapon"
+    },
+    {
+      "name": "Home Yatta! Menu  搜索  设置",
+      "url": "/chs",
+      "type": "unknown"
+    }
+  ],
+  "avatars": [
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000130/linnea",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000128/varka",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000126/zibai",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000127/illuga",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000125/columbina",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000123/durin",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000124/jahoda",
+      "type": "avatar"
+    },
+    {
+      "name": "Item [UI_AvatarIcon_MannequinBoy]",
+      "url": "/chs/archive/avatar/10000117/manekin",
+      "type": "avatar"
+    },
+    {
+      "name": "Item [UI_AvatarIcon_MannequinGirl]",
+      "url": "/chs/archive/avatar/10000118/manekina",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000122/nefer",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000120/flins",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000119/lauma",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000121/aino",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000116/ineffa",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000114/skirk",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000115/dahlia",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000112/escoffier",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000113/ifa",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000110/iansan",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000111/varesa",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000109/yumemizuki-mizuki",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000108/lan-yan",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000005-pyro/pyro-traveler-boy",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000007-pyro/pyro-traveler-girl",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000106/mavuika",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000107/citlali",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000104/chasca",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000105/ororon",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000103/xilonen",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000101/kinich",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000100/kachina",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000102/mualani",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000099/emilie",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000095/sigewinne",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000097/sethos",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000098/clorinde",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000096/arlecchino",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000094/chiori",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000092/gaming",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000093/xianyun",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000090/chevreuse",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000091/navia",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000088/charlotte",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000089/furina",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000086/wriothesley",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000087/neuvillette",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000085/freminet",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000083/lynette",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000084/lyney",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000005-hydro/hydro-traveler-boy",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000007-hydro/hydro-traveler-girl",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000061/kirara",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000081/kaveh",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000082/baizhu",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000080/mika",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000079/dehya",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000077/yaoyao",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000078/alhaitham",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000075/wanderer",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000076/faruzan",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000074/layla",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000073/nahida",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000070/nilou",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000071/cyno",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000072/candace",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000068/dori",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000067/collei",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000069/tighnari",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000059/shikanoin-heizou",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000005-dendro/dendro-traveler-boy",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000007-dendro/dendro-traveler-girl",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000065/kuki-shinobu",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000060/yelan",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000066/kamisato-ayato",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000058/yae-miko",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000063/shenhe",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000064/yun-jin",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000055/gorou",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000057/arataki-itto",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000050/thoma",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000054/sangonomiya-kokomi",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000052/raiden-shogun",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000056/kujou-sara",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000062/aloy",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000049/yoimiya",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000053/sayu",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000002/kamisato-ayaka",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000005-electro/electro-traveler-boy",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000007-electro/electro-traveler-girl",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000047/kaedehara-kazuha",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000051/eula",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000048/yanfei",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000045/rosaria",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000046/hu-tao",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000026/xiao",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000037/ganyu",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000038/albedo",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000030/zhongli",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000044/xinyan",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000033/tartaglia",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000039/diona",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000003/jean",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000006/lisa",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000014/barbara",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000015/kaeya",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000016/diluc",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000020/razor",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000021/amber",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000022/venti",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000023/xiangling",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000024/beidou",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000025/xingqiu",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000027/ningguang",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000029/klee",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000031/fischl",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000032/bennett",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000034/noelle",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000035/qiqi",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000036/chongyun",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000041/mona",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000042/keqing",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000043/sucrose",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000005-anemo/anemo-traveler-boy",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000005-geo/geo-traveler-boy",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000007-anemo/anemo-traveler-girl",
+      "type": "avatar"
+    },
+    {
+      "name": "Effect Icon",
+      "url": "/chs/archive/avatar/10000007-geo/geo-traveler-girl",
+      "type": "avatar"
+    },
+    {
+      "name": "Home Yatta! Menu  搜索  设置",
+      "url": "/chs",
+      "type": "unknown"
+    }
+  ],
+  "stats": {
+    "total_weapons": 232,
+    "total_avatars": 127
+  }
+}

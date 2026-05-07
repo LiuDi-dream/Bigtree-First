@@ -40,5 +40,3 @@ Thumbs.db
 # Secrets
 .env
 
-# Local runtime data
-memory/

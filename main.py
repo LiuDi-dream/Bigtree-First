@@ -1,4 +1,8 @@
-import readline
+try:
+    import readline
+except ImportError:
+    # Windows 环境下没有原生的 readline，直接忽略即可
+    pass
 import os
 import json
 import re
