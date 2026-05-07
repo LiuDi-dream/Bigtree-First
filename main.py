@@ -113,6 +113,31 @@ def main():
                 if json_match:
                     try:
                         bgi_cmd = json.loads(json_match.group(1))
+                        
+                        # ==========================================
+                        # 🌟 核心拦截层：终端专属的圣遗物意图转化
+                        # ==========================================
+                        if "energy_task" in bgi_cmd and bgi_cmd["energy_task"].get("action") == "run_artifact":
+                            raw_target = bgi_cmd["energy_task"].get("target", "")
+                            
+                            from skills.artifact_match import get_domain_by_user_intent
+                            raw_data_path = os.path.join("memory", "artifact_get_methods_raw.json")
+                            real_domain = "未找到对应副本"
+                            
+                            try:
+                                if os.path.exists(raw_data_path):
+                                    with open(raw_data_path, "r", encoding="utf-8") as f:
+                                        raw_json_data = json.load(f)
+                                    real_domain = get_domain_by_user_intent(raw_target, raw_json_data)
+                            except Exception as e:
+                                print(f"❌ 圣遗物映射发生错误: {e}")
+                            
+                            if real_domain != "未找到对应副本":
+                                print(f"🔄 字典映射触发：将大模型推测的【{raw_target}】纠正为副本【{real_domain}】")
+                                bgi_cmd["energy_task"]["target"] = real_domain
+                                bgi_cmd["energy_task"]["action"] = "run_domain"
+                        # ==========================================
+                        
                         energy_task = bgi_cmd.get("energy_task", {})
                         free_tasks = bgi_cmd.get("free_task", [])
                         
@@ -147,8 +172,7 @@ def main():
                             break
 
                         if decision_lower in ['y', 't']:
-                            # 🌟 直接调用复写好的物理外挂模块！彻底干掉这儿原本臃肿的100多行代码
-                            # (open_id="CLI_USER" 用于应对飞书API调用的入参，如果在终端运行飞书报错也会被 bgi_controller 默默吞掉，不影响终端打印)
+                            # 🌟 直接调用复写好的物理外挂模块
                             bgi_controller.execute_bgi_task(bgi_cmd, decision_lower, store, open_id="CLI_USER", uid=uid)
                             
                             # 执行完毕后，重新拉取可能被记账更新过的最新进度

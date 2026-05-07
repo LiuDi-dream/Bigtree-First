@@ -28,6 +28,10 @@ def execute_bgi_task(bgi_cmd, decision_lower, store, open_id, uid):
                 bgi_config["TaskEnabledList"]["自动秘境"] = True
                 bgi_config["TaskEnabledList"]["自动地脉花"] = False
                 bgi_config["TaskEnabledList"]["突破材料"] = False
+            # 🌟 新增：解析并覆写周日/全开时的材料顺位 (1, 2, 或 3)
+                # 如果没有传这个值（比如圣遗物本），默认给 "1" 防呆
+                domain_index = energy_task.get("domain_index", "1")
+                bgi_config["SundayEverySelectedValue"] = str(domain_index)
 
             elif energy_task.get("action") == "run_leyline":
                 bgi_config["TaskEnabledList"]["自动秘境"] = False

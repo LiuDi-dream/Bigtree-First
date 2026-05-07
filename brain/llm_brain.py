@@ -7,6 +7,8 @@ import config
 from brain import memory_manager
 from api import feishu_api
 
+# 🌟 引入我们刚刚写的圣遗物匹配模块
+from skills.artifact_match import get_domain_by_user_intent
 
 def load_system_prompt():
     """读取系统规则，优先 prompts/system_rules.md。"""
@@ -30,7 +32,7 @@ def build_model_messages(system_prompt, env_context, history_messages):
 def _make_client():
     """
     根据 .env 配置文件选择对应的大模型 API 提供商，返回 OpenAI 兼容客户端。
-    支持: github, openai, nvidia, custom (如交大 API), local (本地模型，如 ollama、vLLM 等)
+    支持: github, openai, nvidia, custom, local
     """
     provider = os.getenv("LLM_PROVIDER", "github").lower()
     
@@ -65,7 +67,6 @@ def _make_client():
         base_url = os.getenv("LOCAL_BASE_URL", "")
         if not base_url:
             raise ValueError("❌ LOCAL_BASE_URL 未配置。请先启动本地模型服务 (如 ollama、vLLM 等)")
-        # 本地模型不需要 API Key，使用占位符即可
         api_key = os.getenv("LOCAL_API_KEY", "local")
         print(f"🏠 正在连接本地模型服务: {base_url}")
         return OpenAI(base_url=base_url, api_key=api_key)
@@ -118,7 +119,41 @@ def ask_agent(messages, store, uid, open_id):
         if json_match:
             try:
                 bgi_cmd = json.loads(json_match.group(1))
-                approval_msg = ai_reply + "\n\n" + "="*20 + "\n🛑 [系统拦截] 请确认是否执行上述计划？\n👉 回复 'y' 批准执行\n👉 回复 't' 仅测试\n👉 直接回复其他内容进行反驳/修改"
+                
+                # ==========================================
+                # 🌟 核心拦截层：圣遗物意图转化
+                # ==========================================
+                if "energy_task" in bgi_cmd and bgi_cmd["energy_task"].get("action") == "run_artifact":
+                    raw_target = bgi_cmd["energy_task"].get("target", "")
+                    
+                    # 动态读取原始 JSON 字典文件
+                    # 动态读取原始 JSON 字典文件
+                    raw_data_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "memory", "artifact_get_methods_raw.json")
+                    real_domain = "未找到对应副本"
+                    
+                    try:
+                        if os.path.exists(raw_data_path):
+                            with open(raw_data_path, "r", encoding="utf-8") as f:
+                                raw_json_data = json.load(f)
+                            # 调用神器：转化为真实副本名
+                            real_domain = get_domain_by_user_intent(raw_target, raw_json_data)
+                        else:
+                            print(f"⚠️ 找不到圣遗物原始字典: {raw_data_path}")
+                    except Exception as e:
+                        print(f"❌ 圣遗物映射发生错误: {e}")
+                    
+                    # 如果匹配成功，悄悄覆写 JSON 给外挂服用
+                    if real_domain != "未找到对应副本":
+                        print(f"🔄 圣遗物字典映射触发：将【{raw_target}】转化为副本【{real_domain}】")
+                        bgi_cmd["energy_task"]["target"] = real_domain
+                        bgi_cmd["energy_task"]["action"] = "run_domain" # 转化为物理外挂认识的指令
+                    else:
+                        print(f"⚠️ 无法映射圣遗物【{raw_target}】，将原样下发测试。")
+
+                # 生成发送给用户的审批文本 (增加最终解析目标的提示)
+                target_domain = bgi_cmd.get("energy_task", {}).get("target", "无")
+                approval_msg = ai_reply + "\n\n" + "="*20 + f"\n🛑 [系统拦截] 请确认是否执行上述计划？\n🎯 最终解析目标：{target_domain}\n👉 回复 'y' 批准执行\n👉 回复 't' 仅测试\n👉 直接回复其他内容进行反驳/修改"
+                
                 feishu_api.send_feishu_msg(open_id, approval_msg)
 
                 store["pending_task"] = {
@@ -127,6 +162,7 @@ def ask_agent(messages, store, uid, open_id):
                     "uid": uid,
                 }
                 memory_manager.save_chat_store(store)
+                
             except json.JSONDecodeError:
                 feishu_api.send_feishu_msg(open_id, ai_reply + "\n(解析 JSON 失败)")
         else:
