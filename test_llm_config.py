@@ -49,22 +49,34 @@ providers_config = {
         "token_env": "CUSTOM_API_KEY",
         "base_url_env": "CUSTOM_BASE_URL",
     },
+    "local": {
+        "base_url_env": "LOCAL_BASE_URL",
+        "note": "本地模型不需要 API Key",
+    },
 }
 
 for prov, config_keys in providers_config.items():
     token_env = config_keys.get("token_env", "")
-    token_status = "✅ 已配置" if os.getenv(token_env) else "⚠️  未配置"
     
-    if "base_url_env" in config_keys:
-        base_url_env = config_keys["base_url_env"]
+    # 处理本地模型（不需要 API Key）
+    if prov == "local":
+        base_url_env = config_keys.get("base_url_env", "")
         base_url_status = "✅ 已配置" if os.getenv(base_url_env) else "⚠️  未配置"
-        print(f"  {prov.upper()}: {token_status}, {base_url_status}")
+        note = config_keys.get("note", "")
+        print(f"  {prov.upper()}: {base_url_status} ({note})")
     else:
-        print(f"  {prov.upper()}: {token_status}")
+        token_status = "✅ 已配置" if os.getenv(token_env) else "⚠️  未配置"
+        
+        if "base_url_env" in config_keys:
+            base_url_env = config_keys["base_url_env"]
+            base_url_status = "✅ 已配置" if os.getenv(base_url_env) else "⚠️  未配置"
+            print(f"  {prov.upper()}: {token_status}, {base_url_status}")
+        else:
+            print(f"  {prov.upper()}: {token_status}")
 
 print("\n" + "="*60)
 print("💡 使用说明:")
-print("  1. 在 .env 文件中设置 LLM_PROVIDER 为：github, openai, nvidia, custom")
+print("  1. 在 .env 文件中设置 LLM_PROVIDER 为：github, openai, nvidia, custom, local")
 print("  2. 根据选择的提供商配置对应的 API Key 和 Base URL")
 print("  3. 项目会自动读取 .env 并选择对应的 API 提供商")
 print("="*60)

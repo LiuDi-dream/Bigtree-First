@@ -30,7 +30,7 @@ def build_model_messages(system_prompt, env_context, history_messages):
 def _make_client():
     """
     根据 .env 配置文件选择对应的大模型 API 提供商，返回 OpenAI 兼容客户端。
-    支持: github, openai, nvidia, custom (如交大 API)
+    支持: github, openai, nvidia, custom (如交大 API), local (本地模型，如 ollama、vLLM 等)
     """
     provider = os.getenv("LLM_PROVIDER", "github").lower()
     
@@ -61,8 +61,17 @@ def _make_client():
             raise ValueError("❌ CUSTOM_API_KEY 或 CUSTOM_BASE_URL 未配置")
         return OpenAI(base_url=base_url, api_key=api_key)
     
+    elif provider == "local":
+        base_url = os.getenv("LOCAL_BASE_URL", "")
+        if not base_url:
+            raise ValueError("❌ LOCAL_BASE_URL 未配置。请先启动本地模型服务 (如 ollama、vLLM 等)")
+        # 本地模型不需要 API Key，使用占位符即可
+        api_key = os.getenv("LOCAL_API_KEY", "local")
+        print(f"🏠 正在连接本地模型服务: {base_url}")
+        return OpenAI(base_url=base_url, api_key=api_key)
+    
     else:
-        raise ValueError(f"❌ 不支持的 LLM_PROVIDER: {provider}，支持值: github, openai, nvidia, custom")
+        raise ValueError(f"❌ 不支持的 LLM_PROVIDER: {provider}，支持值: github, openai, nvidia, custom, local")
 
 
 def ask_agent(messages, store, uid, open_id):

@@ -33,6 +33,13 @@ CUSTOM_BASE_URL=https://api.example.com/v1
 MODEL_NAME=model-name
 ```
 
+### 本地模型 (Ollama、vLLM 等)
+```env
+LLM_PROVIDER=local
+LOCAL_BASE_URL=http://localhost:8000/v1
+MODEL_NAME=llama2  # 根据本地模型名调整
+```
+
 ---
 
 ## 📝 修改步骤
@@ -68,6 +75,7 @@ MODEL_NAME=model-name
 | 🎓 学生/高校 | 交大 API | 校网免费 |
 | 💰 小成本 | nVidia | 免费额度大 |
 | 🎯 最优精度 | OpenAI | 模型最好 |
+| 🏡 本地隐私 | Local | 完全离线、无隐私泄露 |
 
 ---
 
@@ -97,6 +105,30 @@ MODEL_NAME=model-name
 - 确保 `.env` 文件保存了
 - 检查 API Key 是否正确
 - 运行验证脚本：`./gi_env/bin/python test_llm_config.py`
+
+### 我想用本地模型（Ollama、vLLM），怎么配？
+1. 先启动本地模型服务：
+   ```bash
+   # 使用 Ollama (推荐)
+   ollama serve
+   
+   # 或使用 vLLM
+   python -m vllm.entrypoints.openai.api_server --model llama-2-7b-chat
+   ```
+2. 修改 `.env`:
+   ```env
+   LLM_PROVIDER=local
+   LOCAL_BASE_URL=http://localhost:8000/v1  # Ollama/vLLM 默认端口
+   MODEL_NAME=llama2  # 改成你的本地模型名
+   ```
+3. 运行程序（API Key 不需要填）：
+   ```bash
+   python main.py
+   ```
+
+### 本地模型需要 API Key 吗？
+- ❌ 不需要！本地模型不需要 API Key，会自动使用占位符
+- 完全离线运行，无隐私泄露
 
 ---
 

@@ -35,6 +35,13 @@ CUSTOM_BASE_URL=https://your-api-url.com/v1
 MODEL_NAME=your-model-name
 ```
 
+### 5️⃣ **本地模型** (Ollama、vLLM 等，无需 API Key)
+```ini
+LLM_PROVIDER=local
+LOCAL_BASE_URL=http://localhost:8000/v1
+MODEL_NAME=llama2
+```
+
 ## 🚀 使用步骤
 
 1. **打开 `.env` 文件**
@@ -44,6 +51,7 @@ MODEL_NAME=your-model-name
    - `openai` (OpenAI API)
    - `nvidia` (nVidia API)
    - `custom` (自定义API/交大API)
+   - `local` (本地模型 - Ollama、vLLM 等)
 
 3. **配置对应的 API Key 和 URL**
 
@@ -90,6 +98,33 @@ MODEL_NAME=your-model-name
 ### 自定义API (交大 / 其他兼容OpenAI格式的服务)
 - 只需提供 **API Base URL** 和 **API Key**
 - 适配任何兼容 OpenAI SDK 的服务
+
+### 本地模型 (Ollama、vLLM 等)
+- **优点**: 
+  - 🏡 完全离线运行，无隐私泄露
+  - ⚡ 无网络延迟，响应更快
+  - 💚 完全免费，无费用
+- **支持的框架**: 
+  - Ollama (推荐)
+  - vLLM
+  - LLaMA.cpp
+  - LocalAI 等任何兼容 OpenAI API 的本地服务
+- **安装 Ollama** (推荐):
+  ```bash
+  # macOS/Linux
+  curl https://ollama.ai/install.sh | sh
+  
+  # Windows 用户从这里下载: https://ollama.ai
+  
+  # 启动服务
+  ollama serve
+  
+  # 在另一个终端拉取模型
+  ollama pull llama2  # 或其他模型
+  ```
+- **默认 Base URL**: `http://localhost:8000/v1` (Ollama/vLLM)
+- **支持的模型**: llama2, mistral, neural-chat, phind-codellama 等
+- **API Key**: ✅ **不需要配置**，自动使用占位符 "local"
 
 ## 🔄 切换提供商
 
