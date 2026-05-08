@@ -37,5 +37,5 @@ BGI_BOSS_CONFIG = os.path.join(
     "config.json",
 )
 
-DEFAULT_UID = "158067075"
+DEFAULT_UID = "286682352"
 MAX_HISTORY_MESSAGES = 20

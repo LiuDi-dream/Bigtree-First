@@ -61,24 +61,57 @@ def execute_bgi_task(bgi_cmd, decision_lower, store, open_id, uid):
                 bgi_config["TaskEnabledList"]["突破材料"] = True
 
                 boss_config_path = config.BGI_BOSS_CONFIG
+                
+                # 🌟 修复：带默认值的“自愈型”配置逻辑
+                user_team = ""
+                # 默认使用 README 中推荐的策略兜底，防止小白连外挂都没打开过
+                user_strategy = "万能战斗策略（萌新推荐）" 
+                user_timeout = 240
+                
+                if os.path.exists(boss_config_path):
+                    try:
+                        with open(boss_config_path, "r", encoding="utf-8") as f:
+                            existing_data = json.load(f)
+                            if isinstance(existing_data, list) and len(existing_data) > 0:
+                                first_boss = existing_data[0]
+                                user_team = first_boss.get("team", "")
+                                fight_param = first_boss.get("fightParam", {})
+                                user_strategy = fight_param.get("strategyName", user_strategy)
+                                user_timeout = fight_param.get("timeout", 240)
+                    except Exception as e:
+                        print(f"⚠️ 读取原有 Boss 配置失败，将使用默认推荐配置兜底: {e}")
+                else:
+                    print("💡 未检测到 Boss 配置文件，正在为您自动创建默认兜底配置...")
 
+                # 动态生成新配置
                 boss_data = [{
                     "name": target_domain,
                     "totalCount": 100,
                     "remainingCount": 100,
-                    "team": "挂机刷本专属",
+                    "team": user_team,
                     "returnToStatueAfterEachRound": True,
                     "farmMode": "一次性",
                     "lastFarmTime": None,
                     "dailyLimitCount": 100,
                     "dailyRemainingCount": 100,
-                    "fightParam": {"timeout": 240, "strategyName": "挂机刷本"},
+                    "fightParam": {
+                        "timeout": user_timeout, 
+                        "strategyName": user_strategy 
+                    },
                 }]
 
-                os.makedirs(os.path.dirname(boss_config_path), exist_ok=True)
-                with open(boss_config_path, "w", encoding="utf-8") as f:
-                    json.dump(boss_data, f, ensure_ascii=False, indent=4)
-                print(f"👹 Boss 模块接管：已生成 {target_domain} 的高并发讨伐配置。")
+                # 🌟 修复：不再暴力建文件夹！先检查外挂脚本的根基在不在
+                boss_dir = os.path.dirname(boss_config_path)
+                if os.path.exists(boss_dir):
+                    with open(boss_config_path, "w", encoding="utf-8") as f:
+                        json.dump(boss_data, f, ensure_ascii=False, indent=4)
+                        
+                    display_team = user_team if user_team else "当前驻场队伍"
+                    print(f"👹 Boss 模块接管：已生成 {target_domain} 的讨伐配置（队伍: '{display_team}', 策略: '{user_strategy}'）。")
+                else:
+                    # 如果连文件夹都没有，说明他根本没下载这个脚本，或者路径不对
+                    err_msg = "❌ 严重错误：未找到 Boss 脚本的运行环境！请先在 BetterGI 中订阅《批量讨伐角色养成材料BOSS》脚本，并至少手动运行一次！"
+                    print(err_msg)
 
             # 覆写地图素材
             if gather_items and os.path.exists(map_config_path):

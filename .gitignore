@@ -40,3 +40,5 @@ Thumbs.db
 # Secrets
 .env
 
+# Local Agent Memory
+memory/chat_context.json
