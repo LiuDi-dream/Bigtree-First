@@ -223,3 +223,32 @@ def rollback_last_committed():
 def has_committed_checkpoint() -> bool:
     journal = _load_journal()
     return bool(journal["committed"])
+
+
+def get_checkpoint_summary():
+    """Return a lightweight checkpoint overview for UI layers."""
+    journal = _load_journal()
+    pending = journal.get("pending", [])
+    committed = journal.get("committed", [])
+    latest_committed = committed[-1] if committed else None
+    latest_pending = pending[-1] if pending else None
+    return {
+        "pending_count": len(pending),
+        "committed_count": len(committed),
+        "has_committed": bool(committed),
+        "latest_committed": {
+            "id": latest_committed.get("id"),
+            "reason": latest_committed.get("reason", ""),
+            "created_at": latest_committed.get("created_at", ""),
+            "committed_at": latest_committed.get("committed_at", ""),
+        }
+        if latest_committed
+        else None,
+        "latest_pending": {
+            "id": latest_pending.get("id"),
+            "reason": latest_pending.get("reason", ""),
+            "created_at": latest_pending.get("created_at", ""),
+        }
+        if latest_pending
+        else None,
+    }

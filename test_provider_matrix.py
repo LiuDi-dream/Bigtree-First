@@ -147,6 +147,7 @@ def main() -> None:
             "github",
             {
                 "LLM_PROVIDER": "github",
+                "GITHUB_TOKEN": "dummy-github-token-for-validation",
             },
         ),
         (
