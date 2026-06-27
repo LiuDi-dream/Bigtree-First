@@ -33,6 +33,10 @@ except Exception as e:
 print("\n📝 各提供商配置检查:")
 
 providers_config = {
+    "deepseek": {
+        "token_env": "DEEPSEEK_API_KEY",
+        "base_url_env": "DEEPSEEK_BASE_URL",
+    },
     "github": {
         "token_env": "GITHUB_TOKEN",
         "base_url": "https://models.inference.ai.azure.com",
@@ -76,7 +80,7 @@ for prov, config_keys in providers_config.items():
 
 print("\n" + "="*60)
 print("💡 使用说明:")
-print("  1. 在 .env 文件中设置 LLM_PROVIDER 为：github, openai, nvidia, custom, local")
+print("  1. 在 .env 文件中设置 LLM_PROVIDER 为：deepseek, github, openai, nvidia, custom, local")
 print("  2. 根据选择的提供商配置对应的 API Key 和 Base URL")
 print("  3. 项目会自动读取 .env 并选择对应的 API 提供商")
 print("="*60)

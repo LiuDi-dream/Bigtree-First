@@ -7,6 +7,7 @@ os.environ["no_proxy"] = "open.feishu.cn,*.feishu.cn"
 import json
 import threading
 import time
+import sys
 from flask import Flask
 from dotenv import load_dotenv
 import lark_oapi as lark
@@ -15,12 +16,17 @@ from lark_oapi.adapter.flask import *
 
 # 引入我们刚才拆分出来的各个核心模块
 import config
-from brain import memory_manager, llm_brain
+from brain import memory_manager, llm_brain, rollback_manager
 from skills import bgi_controller
 from api import feishu_api
 from skills.env_reader import fetch_enka_data
 
 load_dotenv()
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 
 # ================= 飞书配置与缓存区 =================
 VERIFICATION_TOKEN = os.getenv("FEISHU_VERIFICATION_TOKEN", "")
@@ -84,6 +90,14 @@ def _handle_message_impl(msg_content: str, open_id: str) -> None:
         feishu_api.send_feishu_msg(open_id, "🧹 记忆已清空。")
         return
 
+    if user_input == 'rollback':
+        restored = rollback_manager.rollback_last_committed()
+        if restored is None:
+            feishu_api.send_feishu_msg(open_id, "↩️ 当前没有可回滚的已提交快照。")
+            return
+        feishu_api.send_feishu_msg(open_id, "↩️ 已同步回滚代码快照与对话记忆。")
+        return
+
     if user_input == 'refresh':
         print("🔄 正在刷新最新展柜上下文...")
         try:
@@ -103,6 +117,7 @@ def _handle_message_impl(msg_content: str, open_id: str) -> None:
     if pending_task:
         bgi_cmd = pending_task.get("bgi_cmd")
         stored_uid = pending_task.get("uid", uid)
+        rollback_checkpoint_id = pending_task.get("rollback_checkpoint_id")
         
         if user_input in ['y', 't', 'yes', '确认', '执行']:
             decision_lower = 'y' if user_input in ['y', 'yes', '确认', '执行'] else 't'
@@ -113,10 +128,15 @@ def _handle_message_impl(msg_content: str, open_id: str) -> None:
             memory_manager.save_chat_store(store)
             
             # 将物理外挂执行放入后台线程
-            threading.Thread(target=bgi_controller.execute_bgi_task, args=(bgi_cmd, decision_lower, store, open_id, stored_uid)).start()
+            threading.Thread(
+                target=bgi_controller.execute_bgi_task,
+                args=(bgi_cmd, decision_lower, store, open_id, stored_uid, rollback_checkpoint_id),
+            ).start()
             return
         else:
             print("\n🚫 审批已驳回。正在将你的要求反馈给大脑重新规划...")
+            if rollback_checkpoint_id:
+                rollback_manager.discard_checkpoint(rollback_checkpoint_id)
             store["pending_task"] = None
             feedback_msg = f"我拒绝了刚才的执行申请。我的新要求是：{msg_content}。请根据我的新要求重新评估，并输出新的 JSON 指令。"
             messages.append({"role": "user", "content": feedback_msg})

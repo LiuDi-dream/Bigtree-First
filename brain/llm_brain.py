@@ -5,6 +5,7 @@ import datetime
 from openai import OpenAI
 import config
 from brain import memory_manager
+from brain import rollback_manager
 from api import feishu_api
 
 # 🌟 引入我们刚刚写的圣遗物匹配模块
@@ -32,10 +33,17 @@ def build_model_messages(system_prompt, env_context, history_messages):
 def _make_client():
     """
     根据 .env 配置文件选择对应的大模型 API 提供商，返回 OpenAI 兼容客户端。
-    支持: github, openai, nvidia, custom, local
+    支持: deepseek, github, openai, nvidia, custom, local
     """
     provider = os.getenv("LLM_PROVIDER", "github").lower()
     
+    if provider == "deepseek":
+        api_key = os.getenv("DEEPSEEK_API_KEY", "")
+        if not api_key:
+            raise ValueError("DEEPSEEK_API_KEY 未配置")
+        base_url = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
+        return OpenAI(base_url=base_url, api_key=api_key)
+
     if provider == "github":
         token = os.getenv("GITHUB_TOKEN", "")
         if not token:
@@ -72,7 +80,7 @@ def _make_client():
         return OpenAI(base_url=base_url, api_key=api_key)
     
     else:
-        raise ValueError(f"❌ 不支持的 LLM_PROVIDER: {provider}，支持值: github, openai, nvidia, custom, local")
+        raise ValueError(f"❌ 不支持的 LLM_PROVIDER: {provider}，支持值: deepseek, github, openai, nvidia, custom, local")
 
 
 def ask_agent(messages, store, uid, open_id):
@@ -108,17 +116,15 @@ def ask_agent(messages, store, uid, open_id):
         )
         ai_reply = response.choices[0].message.content
 
-        # persist assistant reply
-        messages.append({"role": "assistant", "content": ai_reply})
-        messages = memory_manager.trim_history(messages)
-        store["messages"] = messages
-        memory_manager.save_chat_store(store)
-
         # 查找 JSON 指令
         json_match = re.search(r'```json\n(.*?)\n```', ai_reply, re.DOTALL)
         if json_match:
             try:
                 bgi_cmd = json.loads(json_match.group(1))
+                checkpoint_id = rollback_manager.create_checkpoint(
+                    store,
+                    reason="feishu_task_proposal",
+                )
                 
                 # ==========================================
                 # 🌟 核心拦截层：圣遗物意图转化
@@ -154,18 +160,33 @@ def ask_agent(messages, store, uid, open_id):
                 target_domain = bgi_cmd.get("energy_task", {}).get("target", "无")
                 approval_msg = ai_reply + "\n\n" + "="*20 + f"\n🛑 [系统拦截] 请确认是否执行上述计划？\n🎯 最终解析目标：{target_domain}\n👉 回复 'y' 批准执行\n👉 回复 't' 仅测试\n👉 直接回复其他内容进行反驳/修改"
                 
+                # persist assistant reply after the checkpoint is safely captured
+                messages.append({"role": "assistant", "content": ai_reply})
+                messages = memory_manager.trim_history(messages)
+                store["messages"] = messages
+                memory_manager.save_chat_store(store)
+
                 feishu_api.send_feishu_msg(open_id, approval_msg)
 
                 store["pending_task"] = {
                     "bgi_cmd": bgi_cmd,
                     "open_id": open_id,
                     "uid": uid,
+                    "rollback_checkpoint_id": checkpoint_id,
                 }
                 memory_manager.save_chat_store(store)
                 
             except json.JSONDecodeError:
+                messages.append({"role": "assistant", "content": ai_reply})
+                messages = memory_manager.trim_history(messages)
+                store["messages"] = messages
+                memory_manager.save_chat_store(store)
                 feishu_api.send_feishu_msg(open_id, ai_reply + "\n(解析 JSON 失败)")
         else:
+            messages.append({"role": "assistant", "content": ai_reply})
+            messages = memory_manager.trim_history(messages)
+            store["messages"] = messages
+            memory_manager.save_chat_store(store)
             feishu_api.send_feishu_msg(open_id, ai_reply)
 
     except Exception as e:

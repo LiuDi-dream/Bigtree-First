@@ -1,25 +1,31 @@
 # ==================== LLM 配置 ====================
-# 支持的提供商: github, openai, nvidia, custom, local
-# 选择要使用的提供商
+# 可选提供商: github, deepseek, openai, nvidia, custom, local
+# 二选一即可，程序只读取当前 LLM_PROVIDER 对应的那组密钥
 LLM_PROVIDER=github
 
 # 模型名称 (根据提供商调整)
 MODEL_NAME=gpt-4o-mini
 
-# --- GitHub 模型配置 ---
+# --- GitHub Models ---
 # 当 LLM_PROVIDER=github 时使用
 GITHUB_TOKEN=
+
+# --- DeepSeek ---
+# 当 LLM_PROVIDER=deepseek 时使用
+DEEPSEEK_API_KEY=
+DEEPSEEK_BASE_URL=https://api.deepseek.com
+
 # --- OpenAI 配置 ---
 # 当 LLM_PROVIDER=openai 时使用
 OPENAI_API_KEY=
 OPENAI_BASE_URL=https://api.openai.com/v1
 
-# --- nVidia 配置 ---
+# --- NVIDIA 配置 ---
 # 当 LLM_PROVIDER=nvidia 时使用
 NVIDIA_API_KEY=
 NVIDIA_BASE_URL=https://integrate.api.nvidia.com/v1
 
-# --- 通用自定义配置 (如交大API或其他兼容OpenAI的服务) ---
+# --- 通用自定义配置 (如兼容 OpenAI 的服务) ---
 # 当 LLM_PROVIDER=custom 时使用
 CUSTOM_API_KEY=
 CUSTOM_BASE_URL=

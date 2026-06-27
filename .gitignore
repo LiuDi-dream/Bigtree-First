@@ -42,3 +42,4 @@ Thumbs.db
 
 # Local Agent Memory
 memory/chat_context.json
+.vibelign/

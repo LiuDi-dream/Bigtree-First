@@ -7,15 +7,21 @@ import os
 import json
 import re
 import datetime
+import sys
 from dotenv import load_dotenv
 
 # 引入我们拆分出来的核心模块
 import config
-from brain import memory_manager, llm_brain
+from brain import memory_manager, llm_brain, rollback_manager
 from skills import bgi_controller
 from skills.env_reader import fetch_enka_data
 
 load_dotenv()
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 
 def refresh_env_context(uid):
     """拉取最新展柜数据并组装上下文字符串。"""
@@ -60,7 +66,7 @@ def main():
 
     print("\n" + "="*40)
     print("✨ Agent 终端模式已准备就绪！")
-    print("命令：exit 退出 | clear 清空记忆 | refresh 刷新展柜上下文 | history 查看历史")
+    print("命令：exit 退出 | clear 清空记忆 | rollback 回退快照 | refresh 刷新展柜上下文 | history 查看历史")
     print("="*40 + "\n")
 
     if not messages:
@@ -104,6 +110,18 @@ def main():
                 ai_reply = response.choices[0].message.content
                 print(f"\n🤖 Agent: \n{ai_reply}\n")
 
+                json_match = re.search(r'```json\n(.*?)\n```', ai_reply, re.DOTALL)
+                rollback_checkpoint_id = None
+                if json_match:
+                    try:
+                        json.loads(json_match.group(1))
+                        rollback_checkpoint_id = rollback_manager.create_checkpoint(
+                            store,
+                            reason="cli_task_proposal",
+                        )
+                    except json.JSONDecodeError:
+                        rollback_checkpoint_id = None
+
                 messages.append({"role": "assistant", "content": ai_reply})
                 messages = memory_manager.trim_history(messages)
                 store["messages"] = messages
@@ -112,8 +130,6 @@ def main():
                 # ==========================================
                 # 🚀 自动化执行拦截层 (终端专属 HITL 同步阻塞流)
                 # ==========================================
-                json_match = re.search(r'```json\n(.*?)\n```', ai_reply, re.DOTALL)
-                
                 if json_match:
                     try:
                         bgi_cmd = json.loads(json_match.group(1))
@@ -177,20 +193,29 @@ def main():
 
                         if decision_lower in ['y', 't']:
                             # 🌟 直接调用复写好的物理外挂模块
-                            bgi_controller.execute_bgi_task(bgi_cmd, decision_lower, store, open_id="CLI_USER", uid=uid)
+                            bgi_controller.execute_bgi_task(
+                                bgi_cmd,
+                                decision_lower,
+                                store,
+                                open_id="CLI_USER",
+                                uid=uid,
+                                rollback_checkpoint_id=rollback_checkpoint_id,
+                            )
                             
                             # 执行完毕后，重新拉取可能被记账更新过的最新进度
                             store = memory_manager.load_chat_store()
                             messages = store.get("messages", [])
-                            continue # 继续下一轮循环
+                            continue  # 继续下一轮循环
                         else:
                             print(f"\n🚫 审批已驳回。正在将你的要求反馈给大脑重新规划...")
+                            if rollback_checkpoint_id:
+                                rollback_manager.discard_checkpoint(rollback_checkpoint_id)
                             feedback_msg = f"我拒绝了刚才的执行申请。我的新要求是：{user_decision}。请根据我的新要求重新评估，并输出新的 JSON 指令。"
                             messages.append({"role": "user", "content": feedback_msg})
                             messages = memory_manager.trim_history(messages)
                             store["messages"] = messages
                             memory_manager.save_chat_store(store)
-                            continue # 直接跳转回大脑思考阶段
+                            continue  # 直接跳转回大脑思考阶段
                             
                     except json.JSONDecodeError:
                         print("⚠️ Agent 输出的 JSON 格式有误，跳过自动化拦截。")
@@ -212,6 +237,16 @@ def main():
                     os.remove(config.HISTORY_FILE)
                 print("🧹 记忆已清空，请重新运行程序。")
                 break
+
+            if user_input.lower() == 'rollback':
+                restored = rollback_manager.rollback_last_committed()
+                if restored is None:
+                    print("↩️ 当前没有可回滚的已提交快照。")
+                    continue
+                store = restored
+                messages = store.get("messages", [])
+                print("↩️ 已同步回滚代码快照与对话记忆。")
+                continue
 
             if user_input.lower() == 'refresh':
                 print("🔄 正在刷新最新展柜上下文...")

@@ -3,11 +3,15 @@ import json
 import subprocess
 import config
 from api import feishu_api
+from brain import memory_manager, rollback_manager
 
 
-def execute_bgi_task(bgi_cmd, decision_lower, store, open_id, uid):
+def execute_bgi_task(bgi_cmd, decision_lower, store, open_id, uid, rollback_checkpoint_id=None):
     """异步执行 BGI 逻辑（从原 feishu_main.py 拷贝，路径改为 config 常量）。"""
     try:
+        if rollback_checkpoint_id:
+            rollback_manager.commit_checkpoint(rollback_checkpoint_id)
+
         bgi_cmd = bgi_cmd or {}
         energy_task = bgi_cmd.get("energy_task", {})
         free_tasks = bgi_cmd.get("free_task", [])
@@ -164,7 +168,7 @@ def execute_bgi_task(bgi_cmd, decision_lower, store, open_id, uid):
                 print(f"👹 记账成功：虚拟仓库入账 12 个 {boss_name} 掉落材料！当前已积攒：{wallet['boss_mats'][boss_name]} 个")
 
             store["wallet"] = wallet
-            # Persist store is responsibility of caller if needed
+            memory_manager.save_chat_store(store)
 
             # 启动或测试
             if decision_lower == 'y':
